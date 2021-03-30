@@ -1,0 +1,15 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel pablic/index.html --open",
+    "build": "parcel build pablic/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "save": "^2.4.0"
+  }
+}
