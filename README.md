@@ -1,2 +1,2 @@
 # comicsM
-New project. add descriprion later.
+ https://elina-selezneva.github.io/comicsM/
