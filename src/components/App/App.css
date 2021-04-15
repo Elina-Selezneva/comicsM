@@ -1,7 +1,13 @@
 :root{
     --color-dark: #222222;
     --color-red: rgba(255, 10, 10, 0.78);
-    
+    --color-light: #f8f9fa;
+
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+
+    --box-shadow: 0 2px 24px rgba(168, 175, 196, 0.5)
 }
 *, ::after, ::before{
     box-sizing: border-box;
@@ -10,7 +16,9 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--color-dark);
-    height: 200vh;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
 }
 * {
     scrollbar-color: var(--color-red) var(--color-dark);
