@@ -7,7 +7,7 @@
     --spacing-medium: 15px;
     --spacing-large: 20px;
 
-    --box-shadow: 0 2px 24px rgba(168, 175, 196, 0.5)
+    --box-shadow: 0 2px 24px rgba(168, 175, 196, 0.5);
 }
 *, ::after, ::before{
     box-sizing: border-box;

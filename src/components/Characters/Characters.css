@@ -54,3 +54,27 @@
     outline: none;
     cursor: pointer;
 }
+.container__pages{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page{
+    height: 40px;
+    margin: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: red;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 18px rgba(75, 80, 87, 0.5);
+}
+.page_way{
+    width: 80px;
+}
+.page_round{
+    width: 40px;
+    border-radius: 50%;
+}

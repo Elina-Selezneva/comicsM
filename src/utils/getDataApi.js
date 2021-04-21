@@ -10,7 +10,7 @@ class GetDataApi {
      * Метод принимает url на который нужно отправить запрос
      * @param url
      */
-    async getData(url){
+    async getData(url, numPage){
         /**
          * Проверка на ошибку запроса
          */
@@ -19,6 +19,7 @@ class GetDataApi {
                 params: {
                     apikey: API_KEY,
                     limit: 100,
+                    offset: numPage * 100,
                 }
             });
 
