@@ -32,13 +32,7 @@ class Comics {
             <ul class="comics__container">
                 ${htmlContent}
             </ul>
-            <div class="container__pages">
-            <button type='button' class="page page_way">к началу</button>
-            <button type='button' class="page page_way">назад</button>
-            <button type='button' class="page page_round">1</button>
-            <button type='button' class="page page_way page_next">вперед</button>
-            </div>
-            
+                        
         `;
 
     ROOT_INDEX.innerHTML = htmlWrapper;
@@ -58,6 +52,7 @@ class Comics {
             Error.render();
         }
 
+        pagination.renderPagination();
     }
 
     /**
@@ -78,8 +73,11 @@ class Comics {
         document.querySelectorAll('.page_next').forEach(element => {
             element.addEventListener('click', () =>{
                 let data = pagination.nextPage();
-                if(data.length){
-                    Characters.renderContent(data);}
+                data.then(
+                    result => {this.renderComics(result);},
+                    error => {
+                        // error.render()
+                    } )
             })
         })
     }
