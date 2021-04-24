@@ -55,6 +55,18 @@ class Comics {
         pagination.renderPagination();
     }
 
+    renderAndListener(data){
+        data.then(
+            result => {
+                this.renderComics(result);
+                pagination.renderPagination();
+                this.eventListener();
+            },
+            error => {
+                // error.render()
+            } )
+    }
+
     /**
      * Метод для навешивания обработчиков события.
      */
@@ -70,14 +82,27 @@ class Comics {
                 Characters.render(uri);
             })
         })
+
+        document.querySelectorAll('.page_first').forEach(element => {
+            element.addEventListener('click', () =>{
+                let data = pagination.toFirstPage();
+                this.renderAndListener(data);
+            })
+        })
+
         document.querySelectorAll('.page_next').forEach(element => {
             element.addEventListener('click', () =>{
                 let data = pagination.nextPage();
-                data.then(
-                    result => {this.renderComics(result);},
-                    error => {
-                        // error.render()
-                    } )
+                this.renderAndListener(data);
+            })
+        })
+
+        document.querySelectorAll('.page_prev').forEach(element => {
+            element.addEventListener('click', () =>{
+                if (pagination.currentPage > 1){
+                    let data = pagination.prevPage();
+                    this.renderAndListener(data);
+                }
             })
         })
     }
